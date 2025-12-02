@@ -1,20 +1,35 @@
 
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import {getPost} from '../api/PostApi.jsx';
+import { getPost, deletePost } from "../api/PostApi.jsx";
 import "../App.css";
 
 export const Posts = () => {
 
   const [data, setData] = useState([]);
   const getPostData = async() =>{
-    const res = await getPost();
+    const res = await getPost(); 
     console.log(res.data);
     setData(res.data);
   }
   useEffect(() => {
     getPostData();
   }, []);
+
+  //function to delete post
+  const handelDeletePost = async(id) => {
+    try{
+      const res = await deletePost(id);
+      if(res.status === 200){
+        const newUpdatedPost = data.filter((curPost)=>{
+          return curPost.id !== id;
+        })
+        setData(newUpdatedPost);
+      }
+    } catch(err){
+      console.log(); 
+    }
+  };
 
   return (
    <section className="section-post">
@@ -27,7 +42,7 @@ export const Posts = () => {
                   <p>Title: {title}</p>
                   <p>Body: {body}</p>
                   <button>Edit</button>
-                  <button>Delete</button>
+                  <button onClick={()=> handelDeletePost(id)}>Delete</button>
               </li>
             )
           })

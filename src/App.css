@@ -1,0 +1,74 @@
+/* Main Section */
+.section-post {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Remove default UL styles */
+.section-post ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Each Post Card */
+.section-post li {
+  background: #ffffff;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.1s ease-in-out, box-shadow 0.2s;
+}
+
+.section-post li:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+/* Title Style */
+.section-post p:first-child {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #222;
+}
+
+/* Body Style */
+.section-post p:nth-child(2) {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Buttons */
+.section-post button {
+  padding: 8px 16px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.section-post button:nth-of-type(1) {
+  background: #007bff;
+  color: white;
+}
+
+.section-post button:nth-of-type(1):hover {
+  background: #0065d1;
+}
+
+.section-post button:nth-of-type(2) {
+  background: #e63946;
+  color: white;
+}
+
+.section-post button:nth-of-type(2):hover {
+  background: #c91d2e;
+}

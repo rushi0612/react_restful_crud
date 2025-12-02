@@ -1,18 +1,8 @@
-import axios from "axios";
-import React, { useEffect } from 'react'
-import {getPost} from './api/PostApi.jsx';
+import React from "react"
+import Posts from "./components/Posts"
 
-const App = () => {
-  
-  const getPostData = async() =>{
-    const res = await getPost();
-    console.log(res.data);
-  }
-  useEffect(() => {
-    getPostData();
-  }, []);
-  return (
-    <div>App</div>
+const App = () => {  
+  return (<Posts />
   )
 }
 

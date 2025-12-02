@@ -37,3 +37,18 @@ Thumbs.db
 # Optional cache folders
 .cache/
 vite-cache/
+vite
+
+# VS Code extensions (ignore everything inside .vscode except settings.json)
+.vscode/
+!.vscode/settings.json
+
+# Ignore entire VS Code extension cache (in case extensions got copied accidentally)
+.vscode/extensions/
+
+# Ignore Python extension cache
+.ms-python.*
+
+# Ignore all hidden tool/extension folders
+*.nls.*
+

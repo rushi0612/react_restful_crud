@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { getPost, deletePost } from "../api/PostApi.jsx";
 import "../App.css";
+import Form from "./Form.jsx";
 
 export const Posts = () => {
 
@@ -32,6 +33,10 @@ export const Posts = () => {
   };
 
   return (
+    <>
+    <section className="section-form">
+      <Form data={data} setData={setData} />
+    </section>
    <section className="section-post">
       <ul>
         {
@@ -49,6 +54,7 @@ export const Posts = () => {
         }
       </ul>
    </section>
+   </>
   )
 }
 export default Posts;

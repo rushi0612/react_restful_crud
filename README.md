@@ -1,16 +1,105 @@
-# React + Vite
+# React RESTful CRUD App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and clean **CRUD (Create, Read, Update, Delete)** application built using **React, Axios, and REST API**.  
+This project demonstrates how to perform full CRUD operations using a public API.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:**  
+https://reactaxiosapi12.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **GitHub Repo:**  
+https://github.com/rushi0612/react_restful_crud
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Tech Stack
 
-## Expanding the ESLint configuration
+- React (Functional Components + Hooks)
+- Axios (HTTP Requests)
+- Vite (Build Tool)
+- CSS (Custom Styling)
+- JSONPlaceholder (Fake REST API)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+✅ Fetch posts from API (Read)  
+✅ Add new post using POST request (Create)  
+✅ Edit existing post using PUT request (Update)  
+✅ Delete post using DELETE request (Delete)  
+✅ Reusable Form Component  
+✅ Clean card-based UI  
+✅ Real-time UI updates  
+
+---
+
+## 📁 Project Structure
+
+react_restful_crud/
+├── public/
+├── src/
+│ ├── api/
+│ │ └── PostApi.jsx # Axios API functions (GET, POST, PUT, DELETE)
+│ ├── components/
+│ │ ├── Posts.jsx # Display, delete & edit posts
+│ │ └── Form.jsx # Add & Update form
+│ ├── App.jsx # Main App component
+│ └── App.css # Styling
+├── .gitignore
+├── package.json
+└── vite.config.js
+
+
+---
+
+## 🧰 Installation & Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/rushi0612/react_restful_crud.git
+
+# Go to project folder
+cd react_restful_crud
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+⚠️ Important Note (About API)
+
+This project uses JSONPlaceholder, which is a fake REST API:
+
+✅ GET works properly
+
+✅ POST works but does NOT save data on server
+
+✅ PUT works but does NOT update permanently
+
+✅ DELETE works but does NOT delete permanently
+
+🔁 After refreshing the page, all original data returns again.
+This is expected behavior.
+
+For real persistent CRUD, use:
+
+MockAPI
+
+Node.js + Express
+
+Laravel API
+
+🔮 Future Improvements
+
+Real backend integration
+
+Toast notifications
+
+Loading & error states
+
+Form validation
+
+Better mobile UI
+
+Authentication (Login/Register)

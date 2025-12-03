@@ -8,6 +8,8 @@ import Form from "./Form.jsx";
 export const Posts = () => {
 
   const [data, setData] = useState([]);
+  const [updateDataApi, setUpdateDataApi] = useState({});
+
   const getPostData = async() =>{
     const res = await getPost(); 
     console.log(res.data);
@@ -32,10 +34,15 @@ export const Posts = () => {
     }
   };
 
+  const handelUpdatePost = (curElem) => setUpdateDataApi(curElem);
+
   return (
     <>
     <section className="section-form">
-      <Form data={data} setData={setData} />
+      <Form 
+      data={data} setData={setData} 
+      updateDataApi={updateDataApi} 
+      setUpdateDataApi={setUpdateDataApi} />
     </section>
    <section className="section-post">
       <ul>
@@ -46,7 +53,7 @@ export const Posts = () => {
               <li key={id}>
                   <p>Title: {title}</p>
                   <p>Body: {body}</p>
-                  <button>Edit</button>
+                  <button onClick={()=> handelUpdatePost(curElem)} >Edit</button>
                   <button onClick={()=> handelDeletePost(id)}>Delete</button>
               </li>
             )
